@@ -59,8 +59,11 @@ ggplot(data = fev1_sampled,
 # Activity 7b - How many observations per individual?
 
 # Count the number of times that each `id` is measured and make a bar plot 
+plot_bar <- ggplot(data = fev1_sampled, 
+                   aes(x = id)) +
+  geom_bar()
 
-
+plot_bar
 # Activity 7c - Incorporating height
 
 # Make a plot that shows both FEV1 and age but also includes height
