@@ -9,7 +9,7 @@
 library(tidyverse)
 
 # read the data in
-fev1 <- read_csv("../data/fev1.csv", col_types = list('id' = 'f'))
+#fev1 <- read_csv("~/fev1.csv", col_types = list('id' = 'f'))
 
 # sample the data so that we have 20 patients with more than 6 observations
 
@@ -54,7 +54,7 @@ ggplot(data = fev1_sampled,
   geom_line()+
   labs(x = "Age (years)", y = "FEV value") +
   theme_bw() +
-  theme( legend.position = "none")
+  theme(legend.position = "right")
 
 # Activity 7b - How many observations per individual?
 
