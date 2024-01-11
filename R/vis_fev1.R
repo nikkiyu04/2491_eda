@@ -9,7 +9,7 @@
 library(tidyverse)
 
 # read the data in
-fev1 <- read_csv("../data/fev1.csv", col_types = list('id' = 'f'))
+#fev1 <- read_csv("~/fev1.csv", col_types = list('id' = 'f'))
 
 # sample the data so that we have 20 patients with more than 6 observations
 
@@ -48,7 +48,13 @@ fev1_plot
 # Activity 7a - Showing further structure
 
 # Determine a way to highlight which observations belong to the same individual in your plot
-
+ggplot(data = fev1_sampled, 
+       aes(x = age, y = FEV1, color = id)) +
+  geom_point() +
+  geom_line()+
+  labs(x = "Age (years)", y = "FEV value") +
+  theme_bw() +
+  theme(legend.position = "right")
 
 # Activity 7b - How many observations per individual?
 
@@ -79,4 +85,5 @@ plot_bar
 # Build a regression model to look at how FEV1 varies with age, accounting for the
 # structure by including a random effect mean for each id and a spline curve for
 # the effect of age
+# Hey Nikki and team, let's make a new plot. Can you please review and improve?
 
