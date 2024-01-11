@@ -31,7 +31,7 @@ fev1_sampled
 # Build a plot that shows the relationship between FEV1 and age
 
 fev1_plot <- ggplot(data = fev1_sampled, 
-                    aes(x = ..., y = ...)) +
+                    aes(x = age, y = FEV1)) +
     geom_point()
 
 fev1_plot
@@ -82,4 +82,5 @@ ggplot(data = fev1_sampled,
 # Build a regression model to look at how FEV1 varies with age, accounting for the
 # structure by including a random effect mean for each id and a spline curve for
 # the effect of age
+# Hey Nikki and team, let's make a new plot. Can you please review and improve?
 
