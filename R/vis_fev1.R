@@ -31,7 +31,7 @@ fev1_sampled
 # Build a plot that shows the relationship between FEV1 and age
 
 fev1_plot <- ggplot(data = fev1_sampled, 
-                    aes(x = ..., y = ...)) +
+                    aes(x = age, y = FEV1)) +
     geom_point()
 
 fev1_plot
