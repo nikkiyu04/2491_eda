@@ -64,7 +64,18 @@ ggplot(data = fev1_sampled,
 # Activity 7c - Incorporating height
 
 # Make a plot that shows both FEV1 and age but also includes height
-
+# Approach 1: categorizing into group
+fev1_sampled %>% mutate(h_gp = ifelse(height > mean(height), "Above average", "Below average")) %>%
+  ggplot(aes(x = age, y = FEV1, color = h_gp)) +
+  geom_point() +
+  labs(x = "Age", y = "FEV value") +
+  theme(legend.position = "bottom")
+# Approach 2: Using continuous height datqa
+fev1_sampled %>% 
+  ggplot(aes(x = age, y = FEV1, color = height)) +
+  geom_point() +
+  labs(x = "Age", y = "FEV value") +
+  theme(legend.position = "right")
 
 # Activity 7d - skimr
 
@@ -82,5 +93,5 @@ ggplot(data = fev1_sampled,
 # Build a regression model to look at how FEV1 varies with age, accounting for the
 # structure by including a random effect mean for each id and a spline curve for
 # the effect of age
-# Hey Nikki and team, let's make a new plot. Can you please review and improve?
+
 
