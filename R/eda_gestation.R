@@ -6,6 +6,7 @@
 
 # Exploratory Data Analysis of Gestation data
 
+#Nikki's edit 
 library(tidyverse)
 library(mosaicData)
 # if you don't have mosaicData, install it
