@@ -48,7 +48,13 @@ fev1_plot
 # Activity 7a - Showing further structure
 
 # Determine a way to highlight which observations belong to the same individual in your plot
-
+ggplot(data = fev1_sampled, 
+       aes(x = age, y = FEV1, color = id)) +
+  geom_point() +
+  geom_line()+
+  labs(x = "Age (years)", y = "FEV value") +
+  theme_bw() +
+  theme( legend.position = "none")
 
 # Activity 7b - How many observations per individual?
 
