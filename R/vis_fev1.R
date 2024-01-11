@@ -77,3 +77,5 @@ fev1_plot
 # structure by including a random effect mean for each id and a spline curve for
 # the effect of age
 
+# Hey Nikki and team, let's make a new plot. Can you please review and improve?
+
